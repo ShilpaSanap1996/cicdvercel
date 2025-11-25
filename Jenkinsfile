@@ -4,24 +4,26 @@ pipeline{
     environment{
         VERCEL_TOKEN = credentials('vercel-token')
     }
-    stages{
-        stage('Install'){
-            step{
+    stages {
+        stage('Install') {
+            steps {
                 bat 'npm install'
             }
         }
-        stage('Test'){
-            step{
-                echo 'Skip Test'
+
+        stage('Test') {
+            steps {
+                bat 'npm test'
             }
         }
-        stage('Build'){
-            step{
+
+        stage('Build') {
+            steps {
                 bat 'npm run build'
             }
         }
         stage('Deploy'){
-            step{
+            steps{
                 bat 'npx vercel --prod --token --yes --token=%VERCEL_TOKEN%'
             }
         }
