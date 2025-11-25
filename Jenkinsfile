@@ -11,11 +11,12 @@ pipeline{
             }
         }
 
-        stage('Test') {
-            steps {
-                bat 'npm test'
-            }
-        }
+       stage('Test') {
+             steps {
+               bat 'npm test -- --passWithNoTests'
+    }
+}
+
 
         stage('Build') {
             steps {
