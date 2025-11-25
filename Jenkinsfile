@@ -36,7 +36,7 @@ pipeline {
         stage('Deploy to Vercel') {
             steps {
                 // Deploy to Vercel using the token correctly (Windows syntax)
-                bat 'npx vercel --prod --token %VERCEL_TOKEN% --confirm'
+                bat 'npx vercel --prod --token %VERCEL_TOKEN% --9yOUKVzSIAu2tyXZ4ArwPjK3'
             }
         }
     }
