@@ -39,7 +39,7 @@ pipeline {
                 // Deploy to Vercel using the token correctly (Windows syntax)
             //  bat'npx vercel --prod --yes token=%VERCEL_TOKEN% --confirm'
             //    withCredentials([string(credentialsId: 'vercel-token', variable: 'VERCEL_TOKEN')]) {
-                    bat 'npx vercel --prod --token %VERCEL_TOKEN% --yes'
+                    bat 'npx vercel --prod --token=9yOUKVzSIAu2tyXZ4ArwPjK3'
             }
         }
     }
