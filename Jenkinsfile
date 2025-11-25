@@ -3,7 +3,8 @@ pipeline {
 
     // Make sure you have added a Secret Text credential in Jenkins with ID 'vercel-token'
     environment {
-        VERCEL_TOKEN = credentials('vercel-token').password
+        VERCEL_TOKEN = credentials('vercel-token')
+
     }
 
     stages {
